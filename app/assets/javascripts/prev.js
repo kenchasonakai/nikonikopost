@@ -36,16 +36,16 @@ function previewFile() {
   };
 
 
-  reader.onloadend = function () {
-      const preview = document.querySelector("#preview")
-      console.log(preview);
-      if(preview) {
-          preview.src = reader.result;
-      }
-  }
-  if (image_file) {
-      reader.readAsDataURL(image_file);
-  }
+  // reader.onloadend = function () {
+  //     const preview = document.querySelector("#preview")
+  //     console.log(preview);
+  //     if(preview) {
+  //         preview.src = reader.result;
+  //     }
+  // }
+  // if (image_file) {
+  //     reader.readAsDataURL(image_file);
+  // }
 
     Promise.resolve(image_file)
       .then(readFile)
